@@ -1,110 +1,119 @@
 <template lang="">
-<form @submit.prevent="ajouterparticipant">
+    <div class="divform">
+        <form @submit.prevent="ajouterparticipant">
+            <label>Numero passeport </label>
+            <input type="number" v-model="num_passeport" />
 
+            <label>Nom Participant</label>
+            <input type="text" v-model="nom" />
 
-<div class="form-group">
+            <label>Prenom Participant </label>
+            <input type="text" v-model="prenom" />
 
-<input type="number" class="form-control" placeholder="num_passeport" v-model="num_passeport">
+            <label>Date naissance </label>
+            <input type="text" v-model="date_naiss" />
 
-</div>
-<div class="form-group">
+            <label>Pays </label>
+            <input type="text" v-model="pays" />
 
-<input type="text" class="form-control" placeholder="nom" v-model="nom">
+            <label>Numero telephone </label>
+            <input type="number" v-model="tel" />
 
-</div>
-<div class="form-group">
+            <label>Email</label>
+            <input type="text" v-model="email" />
 
-<input type="text" class="form-control" placeholder="prenom" v-model="prenom">
+            <label>Date inscription </label>
+            <input type="text" v-model="date_inscription" />
 
-</div>
-<div class="form-group">
+            <label>Reference vehicule </label>
+            <input type="text" v-model="reference_vehicule" />
 
-<input type="text" class="form-control" placeholder="date_naiss" v-model="date_naiss">
+            <label>Rang </label>
+            <input type="number" v-model="rang" />
 
-</div>
-<div class="form-group">
-
-<input type="text" class="form-control" placeholder="pays" v-model="pays">
-
-</div>
-<div class="form-group">
-
-<input type="number" class="form-control" placeholder="tel" v-model="tel">
-
-</div>
-<div class="form-group">
-
-<input type="text" class="form-control" placeholder="email" v-model="email">
-
-</div>
-<div class="form-group">
-
-<input type="text" class="form-control" placeholder="date_inscription" v-model="date_inscription">
-
-</div>
-<div class="form-group">
-
-<input type="text" class="form-control" placeholder="reference_vehicule" v-model="reference_vehicule">
-
-</div>
-<div class="form-group">
-
-<input type="number" class="form-control" placeholder="rang" v-model="rang">
-
-</div>
-
-
-<button type="submit" class="btn btn-block btn-primary">Ajouter Participant</button>
-</form>
+            <!-- <button type="submit" class="btn btn-success">Ajouter Participant</button> -->
+            <input type="submit" value="Ajouter Participant" class="bttn" />
+        </form>
+    </div>
 </template>
 
 <script>
-
-
 export default {
-name: 'app',
-data() {
-return {
-tab:[],
-id:"",
-num_passeport: "",
-nom: "",
-prenom: "",
-date_naiss: "",
-pays: "",
-tel: "",
-email:"",
-date_inscription: "",
-reference_vehicule: "",
-rang:"",
-}
-},
-methods: {
-ajouterparticipant(){
-
-const pr = {
-id:this.id,
-num_passeport:this.num_passeport,
-nom:this.nom,
-prenom:this.prenom,
-date_naiss:this.date_naiss,
-pays:this.pays,
-tel:this.tel,
-email:this.email,
-date_inscription:this.date_inscription,
-reference_vehicule:this.reference_vehicule,
-rang:this.rang
-}
-this.axios.post("http://localhost:8000/api/participants",pr)
-.then(() => {
-this.$router.push('/participants')})
-.catch(error => {
-this.errorMessage = error.message;
-console.error("There was an error!", error);})
-},
-
-},
-}
+    name: "app",
+    data() {
+        return {
+            tab: [],
+            id: "",
+            num_passeport: "",
+            nom: "",
+            prenom: "",
+            date_naiss: "",
+            pays: "",
+            tel: "",
+            email: "",
+            date_inscription: "",
+            reference_vehicule: "",
+            rang: "",
+        };
+    },
+    methods: {
+        ajouterparticipant() {
+            const pr = {
+                id: this.id,
+                num_passeport: this.num_passeport,
+                nom: this.nom,
+                prenom: this.prenom,
+                date_naiss: this.date_naiss,
+                pays: this.pays,
+                tel: this.tel,
+                email: this.email,
+                date_inscription: this.date_inscription,
+                reference_vehicule: this.reference_vehicule,
+                rang: this.rang,
+            };
+            this.axios
+                .post("http://localhost:8000/api/participants", pr)
+                .then(() => {
+                    this.$router.push("/participants");
+                })
+                .catch((error) => {
+                    this.errorMessage = error.message;
+                    console.error("There was an error!", error);
+                });
+        },
+    },
+};
 </script>
-<style lang="">
+<style>
+input,
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.bttn {
+    width: 100%;
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.bttn:hover {
+    background-color: #45a049;
+}
+
+.divform {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
 </style>

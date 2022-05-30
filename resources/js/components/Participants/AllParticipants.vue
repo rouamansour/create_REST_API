@@ -1,20 +1,22 @@
 <template>
     <div>
-    <h2 class="text-center">Liste des Participants </h2>
+        <br>
+    <h3 class="text-center">Liste des Participants </h3>
 
-    <table class="table" id="example">
-    <thead>
+    <table class="table table-striped" >
+    <thead >
     <tr>
-    <th>numero passeport</th>
-    <th>nom</th>
-    <th>prenom</th>
-    <th>date naissance</th>
+    <th>Numero Passeport</th>
+    <th>Nom</th>
+    <th>Prenom</th>
+    <th>Date naissance</th>
     <th>Pays</th>
-    <th>tel</th>
-    <th>email</th>
-    <th>date inscription </th>
-    <th>rang</th>
-
+    <th>Telephone</th>
+    <th>Email</th>
+    <th>Date Inscription </th>
+    <th>Rang</th>
+    <th >id</th>
+    <th >Action</th>
     </tr>
     </thead>
     <tbody>
@@ -31,10 +33,13 @@
     <td>{{p.reference_vehicule}}</td>
     <td>{{p.rang}}</td>
     <td>
-    <button @click.prevent="deleteParticipant(p.id)" class="btn btn-danger">
+    <button @click.prevent="deleteParticipant(p.id)"  type="button" class="btn btn-outline-dark">
     Supprimer
     </button>
-    <router-link :to="{name: 'editParticipant', params: { id: p.id}}" class="btn btn-success">Modifier</router-link>
+    <br>
+    <router-link :to="{name: 'editParticipant', params: { id: p.id}}" type="button" class="btn btn-outline-warning">
+    Modifier
+    </router-link>
     
     </td>
     </tr>
@@ -62,7 +67,7 @@
     },
     methods: {
     deleteParticipant(id) {
-    if (window.confirm("Etes-vous sûr de vouloir supprimer ?")) {
+    if (window.confirm("Etes-vous sûr de vouloir supprimer le participant ?")) {
     this.axios
     .delete(`http://localhost:8000/api/participants/${id}`)
     .then(res => {
@@ -85,3 +90,6 @@
     }
     }
 </script>
+<style >
+
+</style>

@@ -12,6 +12,7 @@
 </div>
 <router-view> </router-view>
 </div>
+
 </template>
 <script>
 import Menu from './Menu'
@@ -33,3 +34,9 @@ this.token=user.token;
 }
 }
 </script>
+<!-- <style lang="scss">
+main {
+background-image:
+url('./images/img1.jpg')
+}
+</style> -->
