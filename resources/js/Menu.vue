@@ -50,6 +50,15 @@
                     </router-link>
                 </li>
 
+                <li class="nav-item active">
+                    <router-link
+                        class="nav-link navbar-brand pr-3"
+                        to="/Logout"
+                    >
+                        Logout
+                    </router-link>
+                </li>
+
                     <!-- <li class="nav-item active">
                         <router-link
                             class="form-control mr-sm-2"

@@ -20153,6 +20153,12 @@ var _hoisted_13 = {
 
 var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Login ");
 
+var _hoisted_15 = {
+  "class": "nav-item active"
+};
+
+var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Logout ");
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
 
@@ -20196,7 +20202,17 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <li class=\"nav-item active\">\n                        <router-link\n                            class=\"form-control mr-sm-2\"\n                            to=\"/register\"\n                        >\n                            Register\n                        </router-link>\n                    </li>\n\n                    <li class=\"nav-item active\">\n                        <router-link class=\"form-control mr-sm-2\" to=\"/logout\">\n                            Logout\n                        </router-link>\n                    </li> ")])])]);
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    "class": "nav-link navbar-brand pr-3",
+    to: "/Logout"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_16];
+    }),
+    _: 1
+    /* STABLE */
+
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <li class=\"nav-item active\">\r\n                        <router-link\r\n                            class=\"form-control mr-sm-2\"\r\n                            to=\"/register\"\r\n                        >\r\n                            Register\r\n                        </router-link>\r\n                    </li>\r\n\r\n                    <li class=\"nav-item active\">\r\n                        <router-link class=\"form-control mr-sm-2\" to=\"/logout\">\r\n                            Logout\r\n                        </router-link>\r\n                    </li> ")])])]);
 }
 
 /***/ }),
@@ -20247,7 +20263,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.user.password]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <button class=\"btn btn-primary btn-block\">\nValider\n</button> "), _hoisted_2], 32
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.user.password]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <button class=\"btn btn-primary btn-block\">\r\nValider\r\n</button> "), _hoisted_2], 32
   /* HYDRATE_EVENTS */
   )]);
 }
@@ -20308,14 +20324,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* TEXT */
   )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.user.email), 1
   /* TEXT */
-  )])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    type: "button",
-    "class": "btn btn-success",
-    onClick: _cache[0] || (_cache[0] = function ($event) {
-      return _ctx.reRender();
-    })
-  }, "Valider l'accès")], 64
-  /* STABLE_FRAGMENT */
+  )])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <button type=\"button\" class=\"btn btn-success\" @click=\"reRender()\">Valider l'accès</button> ")], 2112
+  /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */
   );
 }
 
@@ -20347,7 +20357,7 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 );
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <h3> Si vous disposez déjà d'un compte passez à la connexion\n<router-link to=\"/login\"> Login </router-link>\n</h3> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <h2>Enregistrement</h2> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <h3> Si vous disposez déjà d'un compte passez à la connexion\r\n<router-link to=\"/login\"> Login </router-link>\r\n</h3> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <h2>Enregistrement</h2> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
     onSubmit: _cache[4] || (_cache[4] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $options.handleRegister && $options.handleRegister.apply($options, arguments);
     }, ["prevent"]))
@@ -20383,7 +20393,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.user.password_confirmation]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <button class=\"btn btn-primary btn-block\">\nRegister\n</button> "), _hoisted_2], 32
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.user.password_confirmation]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <button class=\"btn btn-primary btn-block\">\r\nRegister\r\n</button> "), _hoisted_2], 32
   /* HYDRATE_EVENTS */
   )]);
 }
@@ -20906,7 +20916,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\ninput,\nselect {\n    width: 100%;\n    padding: 12px 20px;\n    margin: 8px 0;\n    display: inline-block;\n    border: 1px solid #ccc;\n    border-radius: 4px;\n    box-sizing: border-box;\n}\n.bttn {\n    width: 100%;\n    background-color: #4caf50;\n    color: white;\n    padding: 14px 20px;\n    margin: 8px 0;\n    border: none;\n    border-radius: 4px;\n    cursor: pointer;\n}\n.bttn:hover {\n    background-color: #45a049;\n}\n.divform {\n    border-radius: 5px;\n    background-color: #f2f2f2;\n    padding: 20px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\ninput,\r\nselect {\r\n    width: 100%;\r\n    padding: 12px 20px;\r\n    margin: 8px 0;\r\n    display: inline-block;\r\n    border: 1px solid #ccc;\r\n    border-radius: 4px;\r\n    box-sizing: border-box;\n}\n.bttn {\r\n    width: 100%;\r\n    background-color: #4caf50;\r\n    color: white;\r\n    padding: 14px 20px;\r\n    margin: 8px 0;\r\n    border: none;\r\n    border-radius: 4px;\r\n    cursor: pointer;\n}\n.bttn:hover {\r\n    background-color: #45a049;\n}\n.divform {\r\n    border-radius: 5px;\r\n    background-color: #f2f2f2;\r\n    padding: 20px;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -20930,7 +20940,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\ninput,\nselect {\n    width: 100%;\n    padding: 12px 20px;\n    margin: 8px 0;\n    display: inline-block;\n    border: 1px solid #ccc;\n    border-radius: 4px;\n    box-sizing: border-box;\n}\n.bttn {\n    width: 100%;\n    background-color: #4caf50;\n    color: white;\n    padding: 14px 20px;\n    margin: 8px 0;\n    border: none;\n    border-radius: 4px;\n    cursor: pointer;\n}\n.bttn:hover {\n    background-color: #45a049;\n}\n.divform {\n    border-radius: 5px;\n    background-color: #f2f2f2;\n    padding: 20px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\ninput,\r\nselect {\r\n    width: 100%;\r\n    padding: 12px 20px;\r\n    margin: 8px 0;\r\n    display: inline-block;\r\n    border: 1px solid #ccc;\r\n    border-radius: 4px;\r\n    box-sizing: border-box;\n}\n.bttn {\r\n    width: 100%;\r\n    background-color: #4caf50;\r\n    color: white;\r\n    padding: 14px 20px;\r\n    margin: 8px 0;\r\n    border: none;\r\n    border-radius: 4px;\r\n    cursor: pointer;\n}\n.bttn:hover {\r\n    background-color: #45a049;\n}\n.divform {\r\n    border-radius: 5px;\r\n    background-color: #f2f2f2;\r\n    padding: 20px;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

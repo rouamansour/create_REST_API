@@ -14,7 +14,7 @@
 {{user.email}}
 </p>
 </div>
-<button type="button" class="btn btn-success" @click="reRender()">Valider l'accès</button>
+<!-- <button type="button" class="btn btn-success" @click="reRender()">Valider l'accès</button> -->
 </template>
 <script>
 const API_URL = 'http://localhost:8000/api/auth/';
