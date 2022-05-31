@@ -33,6 +33,22 @@
                         Ajout Participant
                     </router-link>
                 </li>
+                 <li class="nav-item active">
+                    <router-link
+                        class="nav-link navbar-brand pr-3"
+                        to="/Register"
+                    >
+                        Register
+                    </router-link>
+                </li>
+                <li class="nav-item active">
+                    <router-link
+                        class="nav-link navbar-brand pr-3"
+                        to="/Login"
+                    >
+                        Login
+                    </router-link>
+                </li>
 
                     <!-- <li class="nav-item active">
                         <router-link
@@ -42,7 +58,7 @@
                             Register
                         </router-link>
                     </li>
-                    
+
                     <li class="nav-item active">
                         <router-link class="form-control mr-sm-2" to="/logout">
                             Logout

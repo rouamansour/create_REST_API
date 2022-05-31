@@ -1,26 +1,19 @@
 <template>
-<div class="col-md-8">
-<div class="card card-container">
-<h2>Connexion</h2>
+<div class="divform">
+
+<!-- <h2>Connexion</h2> -->
 <form @submit.prevent="handleLogin">
 
-<div class="form-group">
+<input placeholder="email" type="email"  v-model="user.email"/>
 
-<input placeholder="email" type="email" class="form-control" v-model="user.email"/>
+<input placeholder="password" type="password"  v-model="user.password"/>
 
-</div>
-<div class="form-group">
-<input placeholder="password" type="password" class="form-control" v-model="user.password"/>
-
-</div>
-<div class="form-group">
-<button class="btn btn-primary btn-block">
+<!-- <button class="btn btn-primary btn-block">
 Valider
-</button>
-</div>
+</button> -->
+ <input type="submit" value="Valider" class="bttn" />
 </form>
 
-</div>
 </div>
 </template>
 <script>
@@ -52,3 +45,37 @@ this.$router.push({ name: 'profile' })
 },
 };
 </script>
+
+<style>
+input,
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.bttn {
+    width: 100%;
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.bttn:hover {
+    background-color: #45a049;
+}
+
+.divform {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
